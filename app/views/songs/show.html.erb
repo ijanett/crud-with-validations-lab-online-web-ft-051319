@@ -1,6 +1,10 @@
 <div>
     <h3><%= @song.title %></h3>
+    <%if @song.released %>
     <p><strong>Realease Year:</strong> <%= @song.release_year %></p>
+    <%else%>
+    <p><strong>Unreleased</strong></p>
+    <%end%>
     <p><strong>Genre:</strong> <%= @song.genre %></p>
     <p><strong>Artist:</strong> <%= @song.artist_name %></p>
     <%= form_tag song_path(@song), method: "delete" do %>
