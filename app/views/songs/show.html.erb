@@ -1,0 +1,9 @@
+<div>
+    <h3><%= @song.title %></h3>
+    <p><strong>Realease Year:</strong> <%= @song.release_year %></p>
+    <p><strong>Genre:</strong> <%= @song.genre %></p>
+    <p><strong>Artist:</strong> <%= @song.artist_name %></p>
+    <%= form_tag song_path(@song), method: "delete" do %>
+        <%= submit_tag "Delete Song" %>
+    <% end %>
+</div>
